@@ -102,6 +102,9 @@ bot.on('message', msg => {
     }
 
     if (msg.author.id !== bot.user.id) return;
+    if (msg.author.id !== "184444581662687232") {
+        return;
+    }
 
     if (msg.guild && bot.config.blacklistedServers && bot.config.blacklistedServers.indexOf(msg.guild.id.toString()) > -1) {
         return;
